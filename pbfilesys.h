@@ -21,7 +21,7 @@
 // Take care of adding the folder separator where needed
 char* _PBFSJoinPath(const int nbPath, ...);
 #define PBFSJoinPath(...) \
-  _PBFSJoinPath(__VA_NB_ARGS__(char*, __VA_ARGS__), __VA_ARGS__)
+  _PBFSJoinPath(__VA_NB_ARGS__(const char*, __VA_ARGS__), __VA_ARGS__)
 
 // ================ Inliner ====================
 
