@@ -1,0 +1,61 @@
+\section*{Introduction}
+
+PBFileSys library is a C library to interact with the file system.\\
+
+It provide functions to:
+\begin{itemize}
+\item Join paths together taking care of adding the folder separator character when needed
+\end{itemize}
+
+It uses the \begin{ttfamily}PBErr\end{ttfamily} and \begin{ttfamily}PBCExtension\end{ttfamily} libraries.\\
+
+\section{Interface}
+
+\begin{scriptsize}
+\begin{ttfamily}
+\verbatiminput{../pbfilesys.h}
+\end{ttfamily}
+\end{scriptsize}
+
+\section{Code}
+
+\subsection{pbfilesys.c}
+
+\begin{scriptsize}
+\begin{ttfamily}
+\verbatiminput{../pbfilesys.c}
+\end{ttfamily}
+\end{scriptsize}
+
+\subsection{pbfilesys-inline.c}
+
+\begin{scriptsize}
+\begin{ttfamily}
+\verbatiminput{../pbfilesys-inline.c}
+\end{ttfamily}
+\end{scriptsize}
+
+\section{Makefile}
+
+\begin{scriptsize}
+\begin{ttfamily}
+\verbatiminput{../Makefile}
+\end{ttfamily}
+\end{scriptsize}
+
+\section{Unit tests}
+
+\begin{scriptsize}
+\begin{ttfamily}
+\verbatiminput{../main.c}
+\end{ttfamily}
+\end{scriptsize}
+
+\section{Unit tests output}
+
+\begin{scriptsize}
+\begin{ttfamily}
+\verbatiminput{../unitTestRef.txt}
+\end{ttfamily}
+\end{scriptsize}
+

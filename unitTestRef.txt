@@ -1,0 +1,3 @@
+./A + B -> ./A/B
+/A/B/ + C/ + D.txt -> /A/B/C/D.txt
+UnitTestJoinPath
