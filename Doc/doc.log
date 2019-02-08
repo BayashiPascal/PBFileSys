@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.18)  26 JAN 2019 16:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.18)  8 FEB 2019 23:25
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -508,7 +508,7 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
@@ -517,53 +517,53 @@ File: ../pbfilesys.h  (verbatim)
 
 ]
 File: ../pbfilesys.c  (verbatim)
- [2]
+ [2] [3]
 File: ../pbfilesys-inline.c  (verbatim)
 File: ../Makefile  (verbatim)
 
-Overfull \hbox (787.2669pt too wide) in paragraph at lines 42--42
+Overfull \hbox (787.2669pt too wide) in paragraph at lines 43--43
 []\OT1/cmtt/m/n/8 if [ ! -d ../PBMake ]; then wget https://github.com/BayashiPa
 scal/PBMake/archive/master.zip; unzip master.zip; rm -f master.zip; sed -i '' '
 s@ROOT_DIR=.*@ROOT_DIR='"`pwd | gawk -F/ 'NF{NF-=1};1' | sed -e 's@ @/@g'`"'@' 
 PBMake-master/Makefile.inc; mv PBMake-master ../PBMake; fi[] 
  []
 
-
-Overfull \hbox (196.50842pt too wide) in paragraph at lines 42--42
+[4]
+Overfull \hbox (196.50842pt too wide) in paragraph at lines 43--43
 []\OT1/cmtt/m/n/8 $(COMPILER) `echo "$($(repo)_EXE_DEP) $($(repo)_EXENAME).o" |
  tr ' ' '\n' | sort -u` $(LINK_ARG) $($(repo)_LINK_ARG) -o $($(repo)_EXENAME)[]
  
  []
 
 
-Overfull \hbox (188.0083pt too wide) in paragraph at lines 42--42
+Overfull \hbox (188.0083pt too wide) in paragraph at lines 43--43
 []\OT1/cmtt/m/n/8 $(COMPILER) $(BUILD_ARG) $($(repo)_BUILD_ARG) `echo "$($(repo
 )_INC_DIR)" | tr ' ' '\n' | sort -u` -c $($(repo)_DIR)/$($(repo)_EXENAME).c[] 
  []
 
-[3]
 File: ../main.c  (verbatim)
+[5] [6]
 File: ../unitTestRef.txt  (verbatim)
- [4]) [5] (./doc.aux) ) 
+) [7] (./doc.aux) ) 
 Here is how much of TeX's memory you used:
  13289 strings out of 494314
  255506 string characters out of 6163111
- 290773 words of memory out of 5000000
+ 291773 words of memory out of 5000000
  16377 multiletter control sequences out of 15000+600000
  12740 words of font info for 50 fonts, out of 8000000 for 9000
  372 hyphenation exceptions out of 8191
  55i,6n,54p,405b,314s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
 
 pdfTeX warning: pdflatex: no GlyphToUnicode entry has been inserted yet!
-Output written on doc.pdf (5 pages, 73284 bytes).
+Output written on doc.pdf (7 pages, 78028 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
+ 53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

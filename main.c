@@ -40,11 +40,90 @@ void UnitTestJoinPath() {
     PBErrCatch(PBFileSysErr);
   }
   free(path);
-  printf("UnitTestJoinPath\n");
+  path = PBFSJoinPath("", pathD);
+  printf("'' + %s -> %s\n", pathD, pathD);
+  if (path == NULL || strcmp(path, pathD) != 0) {
+    PBFileSysErr->_type = PBErrTypeUnitTestFailed;
+    sprintf(PBFileSysErr->_msg, "PBFSJoinPath failed");
+    PBErrCatch(PBFileSysErr);
+  }
+  free(path);
+  path = PBFSJoinPath(pathD, "");
+  printf("%s + '' -> %s\n", pathD, pathD);
+  if (path == NULL || strcmp(path, pathD) != 0) {
+    PBFileSysErr->_type = PBErrTypeUnitTestFailed;
+    sprintf(PBFileSysErr->_msg, "PBFSJoinPath failed");
+    PBErrCatch(PBFileSysErr);
+  }
+  free(path);
+  printf("UnitTestJoinPath OK\n");
+}
+
+void UnitTestRootPath() {
+  char* res = NULL;
+  res = PBFSGetRootPath("A/B");
+  printf("A/B -> %s\n", res);
+  if (strcmp(res, "A") != 0) {
+    PBFileSysErr->_type = PBErrTypeUnitTestFailed;
+    sprintf(PBFileSysErr->_msg, "PBFSGetRootPath failed");
+    PBErrCatch(PBFileSysErr);
+  }
+  free(res);
+  res = PBFSGetRootPath("/A/B");
+  printf("/A/B -> %s\n", res);
+  if (strcmp(res, "/A") != 0) {
+    PBFileSysErr->_type = PBErrTypeUnitTestFailed;
+    sprintf(PBFileSysErr->_msg, "PBFSGetRootPath failed");
+    PBErrCatch(PBFileSysErr);
+  }
+  free(res);
+  res = PBFSGetRootPath("/A/B/");
+  printf("/A/B/ -> %s\n", res);
+  if (strcmp(res, "/A/B") != 0) {
+    PBFileSysErr->_type = PBErrTypeUnitTestFailed;
+    sprintf(PBFileSysErr->_msg, "PBFSGetRootPath failed");
+    PBErrCatch(PBFileSysErr);
+  }
+  free(res);
+  res = PBFSGetRootPath("A");
+  printf("A -> %s\n", res);
+  if (strcmp(res, "") != 0) {
+    PBFileSysErr->_type = PBErrTypeUnitTestFailed;
+    sprintf(PBFileSysErr->_msg, "PBFSGetRootPath failed");
+    PBErrCatch(PBFileSysErr);
+  }
+  free(res);
+  res = PBFSGetRootPath("/A");
+  printf("/A -> %s\n", res);
+  if (strcmp(res, "/") != 0) {
+    PBFileSysErr->_type = PBErrTypeUnitTestFailed;
+    sprintf(PBFileSysErr->_msg, "PBFSGetRootPath failed");
+    PBErrCatch(PBFileSysErr);
+  }
+  free(res);
+  res = PBFSGetRootPath("/");
+  printf("/ -> %s\n", res);
+  if (strcmp(res, "/") != 0) {
+    PBFileSysErr->_type = PBErrTypeUnitTestFailed;
+    sprintf(PBFileSysErr->_msg, "PBFSGetRootPath failed");
+    PBErrCatch(PBFileSysErr);
+  }
+  free(res);
+  res = PBFSGetRootPath(NULL);
+  printf("NULL -> NULL\n");
+  if (res != NULL) {
+    PBFileSysErr->_type = PBErrTypeUnitTestFailed;
+    sprintf(PBFileSysErr->_msg, "PBFSGetRootPath failed");
+    PBErrCatch(PBFileSysErr);
+  }
+  free(res);
+
+  printf("UnitTestRootPath OK\n");
 }
 
 void UnitTestAll() {
   UnitTestJoinPath();
+  UnitTestRootPath();
 }
 
 int main(void) {
