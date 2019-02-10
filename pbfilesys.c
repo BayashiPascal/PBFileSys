@@ -23,7 +23,7 @@ char* _PBFSJoinPath(const int nbPath, ...) {
     char* path = va_arg(paths, char*);
     int l = strlen(path);
     len += l;
-    if (path[l - 1] != PBFILESYS_FOLDERSEP)
+    if (l > 0 && path[l - 1] != PBFILESYS_FOLDERSEP)
       ++len;
   }
   // Allocate memory for the final string
